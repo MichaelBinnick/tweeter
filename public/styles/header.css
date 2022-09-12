@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  height: 520px;
+  width: 100vw;
+  background: rgb(217, 151, 51);
+  background-image: url(../images/asfalt-light.png);
+  background-attachment: fixed;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header div {
+  height: 173.3333333px;
+}
+
+#profile-pic {
+  height: 200px
+}
+
+header div h2 {
+  margin-top: 45px;
+  color: #FFFFFF;
+}

@@ -1,0 +1,32 @@
+#top-nav {
+  display: flex;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  justify-content: space-between;
+  padding: 0 1.5em 0 1.5em;
+  position: fixed;
+}
+
+#top-nav span {
+  font-family: 'Bungee', cursive;
+  font-size: 52px;
+  align-self: flex-end;
+  padding-bottom: 15px;
+}
+
+#writer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#writer p {
+  margin-bottom: 5px;
+}
+
+#writer i {
+  color: red;
+}
