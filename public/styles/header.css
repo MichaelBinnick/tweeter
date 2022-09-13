@@ -1,4 +1,4 @@
-header {
+.main-page-header {
   display: flex;
   height: 520px;
   width: 100vw;
@@ -11,7 +11,7 @@ header {
   align-items: center;
 }
 
-header div {
+.main-page-header div {
   height: 173.3333333px;
 }
 
@@ -19,7 +19,7 @@ header div {
   height: 200px
 }
 
-header div h2 {
+.main-page-header div h2 {
   margin-top: 45px;
   color: #FFFFFF;
 }
