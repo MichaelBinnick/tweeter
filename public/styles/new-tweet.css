@@ -40,3 +40,7 @@ textarea::placeholder {
 .new-tweet div output {
   font-family: 'Bungee', cursive;
 }
+
+.counter-below {
+  color: red;
+}
