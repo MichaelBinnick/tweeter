@@ -1,6 +1,7 @@
 #tweets {
   border: solid #4f4f4f 3px;
   margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .tweet {
@@ -44,6 +45,14 @@
   font-size: small;
 }
 
-.tweet footer div i {
+.fas {
   color: #4056A1;
+}
+
+.tweets-hover {
+  box-shadow: 5px 5px #a9a9a9;
+}
+
+.icon-hover {
+  color: rgb(217, 151, 51);
 }
