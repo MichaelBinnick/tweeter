@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.new-tweet-form {
+  display: flex;
+  flex-direction: column;
+}
+
 #tweet-text {
   background: none;
   border-bottom: solid rgb(72, 72, 72) 3px;
@@ -21,14 +26,14 @@ textarea::placeholder {
   font-weight: 600;
 }
 
-.new-tweet div {
+.new-tweet-form div {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.new-tweet div button {
+.new-tweet-form div button {
   background-color: #4056A1;
   color: white;
   font-family: 'Bungee', cursive;
@@ -37,7 +42,7 @@ textarea::placeholder {
   border: none;
 }
 
-.new-tweet div output {
+.new-tweet-form div output {
   font-family: 'Bungee', cursive;
 }
 

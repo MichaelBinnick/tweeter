@@ -49,6 +49,10 @@
   color: #4056A1;
 }
 
+.fas:hover {
+  color:rgb(217, 151, 51);
+}
+
 .tweets-hover {
   box-shadow: 5px 5px #a9a9a9;
 }

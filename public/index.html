@@ -15,6 +15,9 @@
     <!-- Font Awesome Library (https://cdnjs.com/libraries/font-awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
     
+    <!-- Timeago Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -39,11 +42,9 @@
     <!-- Character Counter -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     
-    <!-- Tweets On Hover -->
-    <script type="text/javascript" src="/scripts/tweet-hover.js"></script>
- 
+    
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav id="top-nav">
@@ -53,7 +54,7 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-
+    
     <header class="main-page-header">
       <div>
       </div>
@@ -64,12 +65,12 @@
         <h2><strong>Michael</strong> Binnick</h2>
       </div>
     </header>
-
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form class ='new-tweet' method="POST" action="/tweets/">
+        <form class ='new-tweet-form' method="POST" action="/">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div>
             <button type="submit">Tweet</button>
@@ -77,32 +78,35 @@
           </div>
         </form>
       </section>
-
+      
       <section id="tweets">
-
-        <!-- This was a data-tester tweet
         
+        <!-- This was a data-tester tweet
+          
           <article class="tweet">
-          <header>
-            <div>
-              <i class="fas fa-user"></i>
-              <p>Newton</p>
-            </div>
-            <p class="user-tag">@SirIsaac</p>
-          </header>
-          <p>If I have seen further...</p>
-          <footer>
-            <p>10 days ago</p>
-            <div>
-              <i class="fas fa-flag fa-xs"></i>
-              <i class="fas fa-retweet fa-xs"></i>
-              <i class="fas fa-heart fa-xs"></i>
-            </div>
-          </footer>
-        </article> -->
-
-      </section>
-
-    </main>
-  </body>
+            <header>
+              <div>
+                <i class="fas fa-user"></i>
+                <p>Newton</p>
+              </div>
+              <p class="user-tag">@SirIsaac</p>
+            </header>
+            <p>If I have seen further...</p>
+            <footer>
+              <p>10 days ago</p>
+              <div>
+                <i class="fas fa-flag fa-xs"></i>
+                <i class="fas fa-retweet fa-xs"></i>
+                <i class="fas fa-heart fa-xs"></i>
+              </div>
+            </footer>
+          </article> -->
+          
+        </section>
+        
+      </main>
+      
+      <!-- Tweets On Hover -->
+      <script type="text/javascript" src="/scripts/tweet-hover.js"></script>
+    </body>
 </html>
