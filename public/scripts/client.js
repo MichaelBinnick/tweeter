@@ -31,7 +31,7 @@ const createTweetElement = function(tweetObject) {
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     const $newTweet = createTweetElement(tweet);
-    $('#tweets').append($newTweet);
+    $('#tweets').prepend($newTweet);
   }
 };
 
@@ -58,6 +58,8 @@ $(document).ready(function() {
     if (serializedData.length > 140) {
       return alert("You've entered too many characters! Please reduce your tweet.");
     }
-    $.post('/tweets/', serializedData)
+    $.post('/tweets/', serializedData, () => {
+      loadTweets();
+    })
   })
 });
