@@ -45,6 +45,8 @@ const renderTweets = function(tweets) {
 // Test / driver code (temporary). Eventually will get this from the server.
 $(document).ready(function() {
 
+  $('#tweet-error').slideUp();
+
   const loadTweets = function() {
     $.ajax('/tweets/', { method: 'GET' })
     .then(function (tweetsData) {
@@ -59,13 +61,28 @@ $(document).ready(function() {
     event.preventDefault();
     const serializedData = $(this).serialize();
     if (serializedData.length <= 5) {
-      return alert('The tweet is empty!');
+      $('#tweet-error').slideUp(200, 'swing', () => {
+        $('#tweet-error').text('Error: The tweet is empty!');
+        $('#tweet-error').css('visibility', 'visible');
+        $('#tweet-error').slideDown(2300, 'swing', () => {
+        });
+      })
     }
     if (serializedData.length > 140) {
-      return alert("You've entered too many characters! Please reduce your tweet.");
+      $('#tweet-error').slideUp(200, 'swing', () => {
+        $('#tweet-error').text('Error: You\'ve entered too many characters! Please reduce your tweet.');
+        $('#tweet-error').css('visibility', 'visible');
+        $('#tweet-error').slideDown(2300, 'swing', () => {
+        }); 
+      })   
     }
-    $.post('/tweets/', serializedData, () => {
-      loadTweets();
-    })
+    if (serializedData.length > 5 && serializedData.length < 141) {
+      $('#tweet-error').slideUp(200, 'swing', () => {
+        $('#tweet-error').css('visibility', 'hidden');
+      })   
+      $.post('/tweets/', serializedData, () => {
+        loadTweets();
+      })
+    }
   })
 });

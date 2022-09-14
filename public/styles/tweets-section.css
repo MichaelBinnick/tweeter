@@ -4,6 +4,17 @@
   margin-bottom: 10px;
 }
 
+#tweet-error {
+  visibility: hidden;
+  border: solid 3px red;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-weight: 800;
+}
+
 .tweet {
   display: flex;
   flex-direction: column;
