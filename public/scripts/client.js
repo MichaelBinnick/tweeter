@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escapeStr = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweetObject) {
   const element = $(`
     <article class="tweet">
@@ -14,7 +20,7 @@ const createTweetElement = function(tweetObject) {
         </div>
         <p class="user-tag">${tweetObject.user.handle}</p>
       </header>
-      <p>${tweetObject.content.text}</p>
+      <p>${escapeStr(tweetObject.content.text)}</p>
       <footer>
         <p>${timeago.format(tweetObject.created_at)}</p>
         <div>
