@@ -37,6 +37,11 @@
   gap: 10px;
 }
 
+.avatar {
+  height: 40px;
+  width: 40px;
+}
+
 .user-tag {
   font-weight: 600;
   color: #cfcfcf;

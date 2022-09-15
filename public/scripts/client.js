@@ -14,8 +14,8 @@ const createTweetElement = function(tweetObject) {
   const element = $(`
     <article class="tweet">
       <header>
-        <div>
-          <i class="fas fa-user"></i>
+        <div id="user-card">
+        <img src=${tweetObject.user.avatars} alt="user's avatar" class="avatar">
           <p>${tweetObject.user.name}</p>
         </div>
         <p class="user-tag">${tweetObject.user.handle}</p>
@@ -31,6 +31,7 @@ const createTweetElement = function(tweetObject) {
       </footer>
     </article>
   `);
+  
   return element;
 }
 
