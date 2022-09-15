@@ -49,5 +49,15 @@
 @media only screen and (max-width: 1023px) {
   #top-nav {
     background:none;
+    text-shadow: 1px 1px 1px #5a5a5a;
   }
+  
+  #top-nav span {
+    -webkit-text-stroke: 1px black;
+  }
+
+  #writer {
+    -webkit-text-stroke: .25px black;
+  }
+
 }
