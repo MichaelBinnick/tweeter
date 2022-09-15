@@ -2,23 +2,23 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-I coded Tweeter as part of the !["Lighthouse Labs"](https://lighthouselabs.ca) web development bootcamp.
+I coded Tweeter as part of the ["Lighthouse Labs"](https://lighthouselabs.ca) web development bootcamp.
 
 This repository contains everything you need to set-up, run, and use a localhost Tweeter.
 
 ## Screenshots
 
 ### Desktop Homepage
-!["Desktop"](https://github.com/michaelbinnick/tinyapp/blob/master/screenshots/desktop_main.png?raw=true)
+!["Desktop"](https://github.com/michaelbinnick/tweeter/blob/master/screenshots/desktop_main.png?raw=true)
 
 ### Mobile Homepage
-!["Mobile"](https://github.com/michaelbinnick/tinyapp/blob/master/screenshots/mobile_main.png?raw=true)
+!["Mobile"](https://github.com/michaelbinnick/tweeter/blob/master/screenshots/mobile_main.png?raw=true)
 
 ### Empty Tweet Error
-!["Empty Error"](https://github.com/michaelbinnick/tinyapp/blob/master/screenshots/desktop_errorempty.png?raw=true)
+!["Empty Error"](https://github.com/michaelbinnick/tweeter/blob/master/screenshots/desktop_errorempty.png?raw=true)
 
 ### Character Counter
-!["Character Counter"](https://github.com/michaelbinnick/tinyapp/blob/master/screenshots/char_counter.png?raw=true)
+!["Character Counter"](https://github.com/michaelbinnick/tweeter/blob/master/screenshots/char_counter.png?raw=true)
 
 ## Getting Started
 (ensure you have node)
