@@ -1,5 +1,5 @@
 #tweets {
-  border: solid #4f4f4f 3px;
+  border: none;
   margin-top: 40px;
   margin-bottom: 10px;
 }
@@ -20,6 +20,8 @@
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
+  border: solid rgb(72, 72, 72) 3px;
+  margin-bottom: 15px;
 }
 
 .tweet header {
@@ -64,10 +66,27 @@
   color:rgb(217, 151, 51);
 }
 
-.tweets-hover {
+.tweet:hover {
   box-shadow: 5px 5px #a9a9a9;
 }
 
 .icon-hover {
   color: rgb(217, 151, 51);
+}
+
+
+/* Desktop breakpoint - 1024px + */
+
+@media only screen and (min-width: 1024px) {
+  main {
+    padding: 15px;
+    padding-top: 80px;
+  }
+
+}
+
+/* Tablet breakpoint - 768px to 1023px */
+
+@media only screen and (max-width: 1023px) {
+
 }

@@ -1,6 +1,6 @@
 #top-nav {
   display: flex;
-  height: 120px;
+  height: 100px;
   width: 100vw;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -24,9 +24,30 @@
 }
 
 #writer p {
+  margin-block-start: .5em;
   margin-bottom: 5px;
 }
 
 #writer i {
   color: red;
+}
+
+/* media queries below/ responsive design */
+
+
+/* Desktop breakpoint - 1024px + */
+
+@media only screen and (min-width: 1024px) {
+  #top-nav {
+    background-color: #4056A1;
+  }
+
+}
+
+/* Tablet breakpoint - 768px to 1023px */
+
+@media only screen and (max-width: 1023px) {
+  #top-nav {
+    background:none;
+  }
 }
