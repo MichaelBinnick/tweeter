@@ -1,12 +1,12 @@
-# Tweeter Project
+# Tweeter
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This repository contains everything you need to set-up, run, and use a localhost Tweeter.
 
 ## Getting Started
-
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
+(ensure you have node)
+1. Fork this repository.
 2. Clone your repository onto your local device.
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
@@ -21,3 +21,14 @@ This repository is the starter code for the project: Students will fork and clon
 - md5
 - (dev) nodemon
 
+## Tweeter features
+
+### New Tweets
+- You can create a new tweet by entering text into the form provided at the top of the tweet list.
+- Please ensure that your tweet fits the following criteria:
+  - Is over 0 characters long, and isn't exlusively composed of space characters
+  - Is under 141 characters long
+- If your tweet doesn't meet these specifications, you'll receive an error message and your tweet will not get submitted.
+- If your tweet is valid, it will be submitted via a POST request, the form field will empty, and the list of tweets will be refreshed with your new tweet at the top.
+
+### 
