@@ -4,12 +4,16 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
+// function to prevent HTML injection from new tweet submissions
 const escapeStr = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// create a new tweet DOM element using data
+  // note use of escapeStr to prevent html injection
 const createTweetElement = function(tweetObject) {
   const element = $(`
     <article class="tweet">
@@ -35,6 +39,7 @@ const createTweetElement = function(tweetObject) {
   return element;
 }
 
+// calls createTweetElement on each tweet in a dataset
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     const $newTweet = createTweetElement(tweet);
@@ -43,32 +48,47 @@ const renderTweets = function(tweets) {
 };
 
 
-// Test / driver code (temporary). Eventually will get this from the server.
+// code to run after document is generated in browser
 $(document).ready(function() {
 
+  // hides the tweet error element out of view right away
   $('#tweet-error').slideUp();
 
+  // pulls tweets using async AJAX request
   const loadTweets = function() {
     $.ajax('/tweets/', { method: 'GET' })
     .then(function (tweetsData) {
+      
+      // callback will inject retrieved tweets into render function
       renderTweets(tweetsData);
     });
   };
 
+  // call function to show tweets on page
   loadTweets();
 
-
+  // listen for submission of new tweet
   $('.new-tweet-form').submit(function(event) {
     event.preventDefault();
+
+    // encode text from form field
     const serializedData = $(this).serialize();
+    
+    // error for no-characters tweet submission
     if (serializedData.length <= 5) {
+      
+      // reset error box if it's visible
       $('#tweet-error').slideUp(200, 'swing', () => {
+        
+        // display error
         $('#tweet-error').text('Error: The tweet is empty!');
         $('#tweet-error').css('visibility', 'visible');
         $('#tweet-error').slideDown(2300, 'swing', () => {
         });
       })
     }
+
+    // see above for error logic comments
     if (serializedData.length > 140) {
       $('#tweet-error').slideUp(200, 'swing', () => {
         $('#tweet-error').text('Error: You\'ve entered too many characters! Please reduce your tweet.');
@@ -77,11 +97,19 @@ $(document).ready(function() {
         }); 
       })   
     }
+
+    // happy-path for tweet submission
     if (serializedData.length > 5 && serializedData.length < 141) {
+      
+      // hide error message if it's visible
       $('#tweet-error').slideUp(200, 'swing', () => {
         $('#tweet-error').css('visibility', 'hidden');
       })   
+
+      // make AJAX POST request with new tweet's encoded data
       $.post('/tweets/', serializedData, () => {
+        
+        // re-load tweets with new one after
         loadTweets();
       })
     }
