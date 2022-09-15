@@ -89,18 +89,27 @@ $(document).ready(function() {
     // encode text from form field
     const serializedData = $(this).serialize();
 
+    // check for 'only-spaces' value (for error handling)
+    let isOnlySpaces = true;
+    const enteredText = $('#tweet-text').val();
+    for (let i = 0; i < enteredText.length; i++) {
+      if (enteredText[i] !== ' ') {
+        isOnlySpaces = false;
+      }
+    }
+
     // error for no-characters tweet submission
-    if (serializedData.length <= 5) {
-      showErrorBox('Error: The tweet is empty!');
+    if (serializedData.length <= 5 || isOnlySpaces) {
+      showErrorBox('Error: The tweet is empty! Please enter more text.');
     }
 
     // see above for error logic comments (over 140 char this time)
-    if (serializedData.length > 140) {
+    if (serializedData.length > 140 && !isOnlySpaces) {
       showErrorBox('Error: You\'ve entered too many characters! Please reduce your tweet.'); 
     }
 
     // happy-path for tweet submission
-    if (serializedData.length > 5 && serializedData.length < 141) {
+    if (serializedData.length > 5 && serializedData.length < 141 && !isOnlySpaces) {
       
       // hide error message if it's visible
       $('#tweet-error').slideUp(200, 'swing', () => {
