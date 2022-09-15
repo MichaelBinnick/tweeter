@@ -111,6 +111,9 @@ $(document).ready(function() {
         
         // re-load tweets with new one after
         loadTweets();
+
+        // clear textarea field
+        $('#tweet-text').val('');
       })
     }
   })
