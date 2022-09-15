@@ -12,7 +12,7 @@ This repository contains everything you need to set-up, run, and use a localhost
 !["Desktop"](https://github.com/michaelbinnick/tweeter/blob/master/screenshots/desktop_main.png?raw=true)
 
 ### Mobile Homepage
-!["Mobile"](https://github.com/michaelbinnick/tweeter/blob/master/screenshots/mobile_main.png?raw=true)
+!["Mobile"](https://github.com/MichaelBinnick/tweeter/blob/master/screenshots/mobile_main.png?raw=true)
 
 ### Empty Tweet Error
 !["Empty Error"](https://github.com/michaelbinnick/tweeter/blob/master/screenshots/desktop_errorempty.png?raw=true)
