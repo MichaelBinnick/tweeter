@@ -48,6 +48,21 @@ const renderTweets = function(tweets) {
 };
 
 
+// error-box handling on tweet submission error
+const showErrorBox = function(errorString) {
+  
+  // reset error box if it's visible
+  $('#tweet-error').slideUp(200, 'swing', () => {
+        
+    // display error
+    $('#tweet-error').text(`${errorString}`);
+    $('#tweet-error').css('visibility', 'visible');
+    $('#tweet-error').slideDown(2300, 'swing', () => {
+    });
+  })
+}
+
+
 // code to run after document is generated in browser
 $(document).ready(function() {
 
@@ -73,29 +88,15 @@ $(document).ready(function() {
 
     // encode text from form field
     const serializedData = $(this).serialize();
-    
+
     // error for no-characters tweet submission
     if (serializedData.length <= 5) {
-      
-      // reset error box if it's visible
-      $('#tweet-error').slideUp(200, 'swing', () => {
-        
-        // display error
-        $('#tweet-error').text('Error: The tweet is empty!');
-        $('#tweet-error').css('visibility', 'visible');
-        $('#tweet-error').slideDown(2300, 'swing', () => {
-        });
-      })
+      showErrorBox('Error: The tweet is empty!');
     }
 
-    // see above for error logic comments
+    // see above for error logic comments (over 140 char this time)
     if (serializedData.length > 140) {
-      $('#tweet-error').slideUp(200, 'swing', () => {
-        $('#tweet-error').text('Error: You\'ve entered too many characters! Please reduce your tweet.');
-        $('#tweet-error').css('visibility', 'visible');
-        $('#tweet-error').slideDown(2300, 'swing', () => {
-        }); 
-      })   
+      showErrorBox('Error: You\'ve entered too many characters! Please reduce your tweet.'); 
     }
 
     // happy-path for tweet submission
