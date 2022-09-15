@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-I coded Tweeter as part of the ["Lighthouse Labs"](https://lighthouselabs.ca) web development bootcamp.
+I coded Tweeter as part of the [Lighthouse Labs](https://lighthouselabs.ca) web development bootcamp.
 
 This repository contains everything you need to set-up, run, and use a localhost Tweeter.
 
