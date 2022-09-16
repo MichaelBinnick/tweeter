@@ -57,7 +57,7 @@ const showErrorBox = function(errorString) {
     // display error
     $('#tweet-error').text(`${errorString}`);
     $('#tweet-error').css('visibility', 'visible');
-    $('#tweet-error').slideDown(2300, 'swing', () => {
+    $('#tweet-error').slideDown(800, 'swing', () => {
     });
   })
 }
@@ -79,7 +79,6 @@ $(document).ready(function() {
     });
   };
 
-  // call function to show tweets on page
   loadTweets();
 
   // listen for submission of new tweet
@@ -104,12 +103,13 @@ $(document).ready(function() {
     }
 
     // see above for error logic comments (over 140 char this time)
-    if (serializedData.length > 140 && !isOnlySpaces) {
+    if (enteredText.length > 140 && !isOnlySpaces) {
+      console.log(isOnlySpaces)
       showErrorBox('Error: You\'ve entered too many characters! Please reduce your tweet.'); 
     }
 
     // happy-path for tweet submission
-    if (serializedData.length > 5 && serializedData.length < 141 && !isOnlySpaces) {
+    if (serializedData.length > 5 && enteredText.length < 141 && !isOnlySpaces) {
       
       // hide error message if it's visible
       $('#tweet-error').slideUp(200, 'swing', () => {
