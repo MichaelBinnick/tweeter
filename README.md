@@ -49,11 +49,11 @@ This repository contains everything you need to set-up, run, and use a localhost
 - Tweets are only saved locally, and will disappear after the server is stopped.
 
 ### Responsive Design
--The CSS of this app is crafted with different viewports in mind.
--Scale your browser window or use on a mobile device to see the difference.
+- The CSS of this app is crafted with different viewports in mind.
+- Scale your browser window or use on a mobile device to see the difference.
 
 ### jQuery Usage
--jQuery is used liberally in the coding of this app.
--jQuery handles the AJAX requests involved.
--jQuery, and other pseudo-dependencies are linked in the main html file. (index.html)
+- jQuery is used liberally in the coding of this app.
+- jQuery handles the AJAX requests involved.
+- jQuery, and other pseudo-dependencies are linked in the main html file. (index.html)
 
