@@ -41,6 +41,9 @@ const createTweetElement = function(tweetObject) {
 
 // calls createTweetElement on each tweet in a dataset
 const renderTweets = function(tweets) {
+  // reset contents of tweets container so we don't duplicate on a reload
+  $('#tweets').html(' ');
+  
   for (let tweet of tweets) {
     const $newTweet = createTweetElement(tweet);
     $('#tweets').prepend($newTweet);

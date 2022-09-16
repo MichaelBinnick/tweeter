@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('#tweet-text').on('keyup', function() {
+  $('#tweet-text').on('input', function() {
     const charsLeft = 140 - $(this).val().length;
     $(this).next().find('output').html(charsLeft);
     
