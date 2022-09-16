@@ -124,6 +124,9 @@ $(document).ready(function() {
 
         // clear textarea field
         $('#tweet-text').val('');
+
+        // reset char counter
+        $('#tweet-text').next().find('output').html(140);
       })
     }
   })
